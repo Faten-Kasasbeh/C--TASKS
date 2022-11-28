@@ -19,8 +19,9 @@ namespace _28_11_tasks
         protected string MODEL;
         protected int PALLET;
         protected string COLOR;
+        protected int LITTER;
         public car() { }
-        public car(string carsMAke, int year, string type, int price, string model, int pallet, string color)
+        public car(string carsMAke, int year, string type, int price, string model, int pallet, string color , int litters)
         {
             CarsMake = carsMAke;
             YEAR = year;
@@ -29,6 +30,7 @@ namespace _28_11_tasks
             MODEL = model;
             PALLET = pallet;
             COLOR = color;
+            LITTER= litters;
         }
 
         public void STOP()
@@ -41,9 +43,9 @@ namespace _28_11_tasks
         }
     }
 
-     class Ford:car
+    class Ford : car
     {
-        public Ford(string carsMAke, int year, string type, int price, string model, int pallet, string color) : base (carsMAke,  year, type,  price,  model, pallet,  color)
+        public Ford(string carsMAke, int year, string type, int price, string model, int pallet, string color, int litters) : base(carsMAke, year, type, price, model, pallet, color, litters)
         {
             //CarsMake = car;
             //YEAR = yearS;
@@ -54,19 +56,19 @@ namespace _28_11_tasks
             //COLOR = colorS;
 
         }
-        public void print() { Console.WriteLine(CarsMake +" "+ YEAR +"  "+ TYPE +"  "+ PRICE +"  "+ MODEL +"  "+ PALLET +"  "+ COLOR); }
+        public void print() { Console.WriteLine(CarsMake + " " + YEAR + "  " + TYPE + "  " + PRICE + "  " + MODEL + "  " + PALLET + "  " + COLOR +"  "+ "the number of kelo= "+ LITTER * 20); }
     }
     internal class Program
     {
-      
+
 
         static void Main(string[] args)
-            {
-            Ford ford1 = new Ford("Itally", 2015, "Ford", 10000, "Fusion", 997584, "Black");
+        {
+            Ford ford1 = new Ford("Itally", 2015, "Ford", 10000, "Fusion", 997584, "Black", 20);
             ford1.print();
-            ford1.start();  
+            ford1.start();
             ford1.STOP();
-            }
+        }
     }
 }
 
