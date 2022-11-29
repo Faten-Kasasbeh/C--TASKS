@@ -9,7 +9,7 @@ namespace practice
     internal class Program
     {
         //practice
-        abstract class car
+        abstract class Car
         {
             public abstract void StartEngine();
             public abstract void StopEngine();
@@ -25,8 +25,64 @@ namespace practice
             public abstract void CleanGlass();
             public abstract void ChangeGear();
         }
+        class ford : Car
+        {
+            public override void StartEngine() {
+                Console.WriteLine("StartEngine");
+            }
+            public override void StopEngine() {
+                Console.WriteLine("StopEngine");
+            }
+            public override void OpenDoor() {
+                 Console.WriteLine("OpenDoor");
+            }
+            public override void CloseDoor() {
+                Console.WriteLine("CloseDoor");
+            }
+            public override void Honk() {
+                Console.WriteLine("Honk");
+            }
+            public override void IncreaseSpeed() {
+                Console.WriteLine("IncreaseSpeed");
+            }
+            public override void DecreaseSpeed() {
+                Console.WriteLine("DecreaseSpeed");
+            }
+            public override void Breaks() {
+                Console.WriteLine("Breaks");
+            }
+            public override void OpenWindow() {
+                Console.WriteLine("OpenWindow");
+
+            }
+            public override void CloseWindow() {
+                Console.WriteLine("CloseWindow");
+
+            }
+            public override void AdjustSeat() { 
+                Console.WriteLine("AdjustSeat");
+            }
+            public override void CleanGlass()
+            {
+                Console.WriteLine("CleanGlass");
+            }
+            public override void ChangeGear()
+            {
+                Console.WriteLine("ChangeGear");
+            }
+
+
+
+
+
+        }
         static void Main(string[] args)
         {
+            ford ford1= new ford();
+            ford1.StartEngine();    
+            ford1.StopEngine();
+           ford1.OpenDoor();
         }
     }
 }
+
