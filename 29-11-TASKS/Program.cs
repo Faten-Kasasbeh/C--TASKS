@@ -43,26 +43,34 @@ namespace _28_11_tasks
         }
 
         public void print() {
-           
-            int Age = (2022 - BIRTH);
+           int x= DateTime.Now.Year;
+            int Age = (x - BIRTH);
             Console.WriteLine("Name is :  "+Name + " ,  Ige is :   " + Age + "  , ID of employee  " + ID ); }
     }
+
+   
     internal class Program
     {
 
 
         static void Main(string[] args)
         {
-            Manager employee1 = new Manager("AHMAD",2000 ,20012485);
+            DateTime dateTime = new DateTime(2000, 10, 2);
+            int d= dateTime.Year;
+            Manager employee1 = new Manager("AHMAD",d ,20012485);
             employee1.welcome();  
             employee1.print();
 
             Console.WriteLine("Please enter employee name ");
             string _name= Console.ReadLine();
-            Console.WriteLine("Please enter employee birth year ");
-            int _birth =Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter employee birth ");
+            string date1 =Console.ReadLine();
+            DateTime date2 = Convert.ToDateTime(date1);
+            int _birth = date2.Year;
+
             Console.WriteLine("Please enter employee id ");
             int _id =Convert.ToInt32(Console.ReadLine());
+
             Manager employee2 = new Manager(_name, _birth, _id);  
             employee2.welcome();
             employee2.print();

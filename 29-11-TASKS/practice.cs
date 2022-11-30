@@ -23,7 +23,6 @@ namespace practice
             public abstract void CloseWindow();
             public abstract void AdjustSeat();
             public abstract void CleanGlass();
-            public abstract void ChangeGear();
         }
         class ford : Car
         {
@@ -66,11 +65,7 @@ namespace practice
             {
                 Console.WriteLine("CleanGlass");
             }
-            public override void ChangeGear()
-            {
-                Console.WriteLine("ChangeGear");
-            }
-
+           
 
 
 
